@@ -1,0 +1,40 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background-color: var(--accent-blue);
+    color: var(--accent-text);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.logo-text {
+    font-weight: 600;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.header-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}

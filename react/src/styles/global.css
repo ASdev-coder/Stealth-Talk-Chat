@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-main: #949da6;
+    --bg-card: #ffffff;
+    --bg-element: #f3f4f6;
+    --text-main: #111827;
+    --text-secondary: #6b7280;
+    --border-color: #e5e7eb;
+
+    --accent-blue: #e0e7ff;
+    --accent-blue-active: #c7d2fe;
+    --accent-text: #3730a3;
+}
+
+.dark {
+    --bg-main: #1f2937;
+    --bg-card: #111827;
+    --bg-element: #374151;
+    --text-main: #ffffff;
+    --text-secondary: #9ca3af;
+    --border-color: #4b5563;
+
+    --accent-blue: #312e81;
+    --accent-blue-active: #4338ca;
+    --accent-text: #e0e7ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    transition: background-color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+}
