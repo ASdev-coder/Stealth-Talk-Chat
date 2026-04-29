@@ -2,14 +2,6 @@
   "name": "stealth-talk",
   "version": "1.0.0",
   "description": "server",
-  "homepage": "https://github.com/ASdev-coder/Stealth-Talk#readme",
-  "bugs": {
-    "url": "https://github.com/ASdev-coder/Stealth-Talk/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ASdev-coder/Stealth-Talk.git"
-  },
   "license": "ISC",
   "author": "",
   "type": "commonjs",
