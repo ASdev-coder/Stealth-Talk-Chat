@@ -1,0 +1,24 @@
+name: Test workflow
+on: push
+jobs:
+  back:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout back
+        uses: actions/checkout@v4
+      - name: Install back deps
+        run: npm install
+      - name: Run Server
+        run: timeout 10s node test-server/index.js || code=$?; if [ $code -eq 124 ]; then echo "Server started successfully"; else exit $code; fi
+  front:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./react
+    steps:
+      - name: Checkout front
+        uses: actions/checkout@v4
+      - name: Install front deps
+        run: npm install
+      - name: Build project
+        run: npm run build
