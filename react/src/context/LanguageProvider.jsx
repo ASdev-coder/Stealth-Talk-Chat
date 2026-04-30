@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useState } from 'react';
 
 export const LanguageContext = createContext();
 
@@ -12,9 +12,11 @@ export const LanguageProvider = ({ children }) => {
       startChat: "Start Chat",
       ageCategory: "Age category",
       filters: "Filters",
-      textChat: "💬 Text Chat",
-      voiceCall: "📞 Voice Call",
-      videoCall: "📹 Video Call"
+      textChat: "Text Chat",
+      voiceCall: "Voice Call",
+      videoCall: "Video Call",
+      language: "Language",
+      theme: "Theme"
     },
     uk: {
       homeTitle: "Головна сторінка",
@@ -22,13 +24,15 @@ export const LanguageProvider = ({ children }) => {
       startChat: "Почати чат",
       ageCategory: "Вікова категорія",
       filters: "Фільтри",
-      textChat: "💬 Текстовий чат",
-      voiceCall: "📞 Голосовий дзвінок",
-      videoCall: "📹 Відеодзвінок"
+      textChat: "Текстовий чат",
+      voiceCall: "Голосовий дзвінок",
+      videoCall: "Відеодзвінок",
+      language: "Мова",
+      theme: "Тема"
     }
   };
 
-  const t = (key) => translations[language][key] || key;
+  const t = (key) => translations[language]?.[key] || key;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
